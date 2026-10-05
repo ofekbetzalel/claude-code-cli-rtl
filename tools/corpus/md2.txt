@@ -1,0 +1,22 @@
+Output exactly the text between the markers, verbatim (it is markdown), with nothing before or after it, no tools:
+<<<
+## כותרת: בדיקת RTL
+זו פסקה עם **מילה מודגשת**, *נטויה*, וקוד כמו `../src/app.ts` בתוך משפט עברי, וגם מספר 2.1.288.
+שורה שנייה של אותה פסקה, Claude Code בתחילתה? לא, באמצע.
+
+- פריט ראשון עם קישור [לדף](https://x.test/a_(b))
+  English continuation of the first item
+  - פריט מקונן עם ghp_ ו-src/app/
+- פריט שני ארוך מאוד כדי לבדוק איך שבירת השורות עובדת בתוך פריט של רשימה עם הזחה תלויה מימין
+1. צעד ראשון 👍🏽
+2. צעד שני (עם סוגריים) ו-שָׁלוֹם
+
+> ציטוט קצר בעברית
+> עם שורה שנייה
+
+This paragraph is English and stays on the left.
+
+```ts
+const x = 1 // code stays LTR
+```
+>>>

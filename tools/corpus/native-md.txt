@@ -1,0 +1,27 @@
+Output exactly the text between the markers, verbatim, nothing else, no tools.
+<<<
+* star item
++ plus item
+  - nested dash
+    * nested star deeper
+1. first
+2) second
+
+> quote line one
+lazy continuation
+> quote line three
+
+para with hard break  
+next line and a \
+backslash break
+
+***bold italic*** and **bold *nested italic***
+
+[link](https://x.test/a_(b)) done
+
+Title
+=====
+
+Sub
+---
+>>>

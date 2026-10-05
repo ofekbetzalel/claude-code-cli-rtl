@@ -1,0 +1,19 @@
+Output exactly the text between the markers, verbatim (it is markdown), with nothing before or after it, no tools:
+<<<
+## כותרת: בדיקת RTL
+
+זו פסקה עם **מילה מודגשת**, *נטויה*, וקוד כמו `src/app.ts` בתוך משפט עברי, וגם מספר 2.1.288.
+
+- פריט ראשון ברשימה
+- פריט שני שהוא ארוך מאוד כדי לבדוק איך שבירת השורות עובדת בתוך פריט של רשימה עם הזחה תלויה מימין
+1. צעד ראשון
+2. צעד שני (עם סוגריים)
+
+> ציטוט קצר בעברית
+
+```ts
+const x = 1 // code stays LTR
+```
+
+This paragraph is English and stays on the left.
+>>>

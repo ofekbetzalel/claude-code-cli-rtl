@@ -1,0 +1,33 @@
+name: Tests
+run-name: Unit tests on ${{ github.head_ref || github.ref_name }}
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['**.md', 'assets/**', 'docs/**', 'LICENSE', '.github/ISSUE_TEMPLATE/**']
+  pull_request:
+    paths-ignore: ['**.md', 'assets/**', 'docs/**', 'LICENSE', '.github/ISSUE_TEMPLATE/**']
+
+permissions:
+  contents: read
+
+jobs:
+  unit:
+    name: Unit tests (Node 24)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      # Node 24 runs the TypeScript sources directly (type stripping); there is no build step.
+      - name: Type-check the pure modules and their tests
+        run: npm run typecheck:node
+      - name: Unit tests
+        run: npm test
+      - name: Installer recovery tests
+        run: npm run test:tools
+      # The engine suites (`npm run test:engine`) and `claude plugin validate` need the Claude Code
+      # CLI; run them locally with `npm run check`.

@@ -1,0 +1,20 @@
+{
+  "name": "claude-code-cli-rtl-dev",
+  "private": true,
+  "type": "module",
+  "description": "Development checks for the plugin (the plugin itself has no dependencies)",
+  "scripts": {
+    "test": "node --test 'mod/rtl/tests/*.spec.ts'",
+    "test:engine": "claude plugin test mod/rtl",
+    "typecheck": "tsc -p mod/rtl && tsc -p tsconfig.node.json",
+    "validate": "claude plugin validate mod/rtl",
+    "check": "npm run typecheck && npm test && npm run test:engine && npm run test:tools && npm run validate",
+    "test:tools": "tools/install.test.sh",
+    "typecheck:node": "tsc -p tsconfig.node.json"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "5.9.3",
+    "playwright-core": "1.58.0"
+  }
+}

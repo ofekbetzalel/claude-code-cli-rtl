@@ -1,0 +1,9 @@
+Output exactly the text between the markers, verbatim, nothing else, no tools.
+<<<
+alpha beta
+gamma delta
+
+- item one
+  continued here
+- item two
+>>>

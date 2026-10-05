@@ -1,0 +1,12 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../out/xterm/xterm.css">
+<style>body{margin:0;background:#1e1e1e} #t{padding:8px}</style>
+<script src="../out/xterm/xterm.js"></script>
+</head><body><div id="t"></div>
+<script>
+  // xterm.js with its default DOM renderer, as browser terminals use it (no WebGL/canvas addon).
+  window.term = new Terminal({ cols: Number(new URLSearchParams(location.search).get('cols') || 100), rows: 30,
+    fontFamily: new URLSearchParams(location.search).get('font') || 'DejaVu Sans Mono, monospace', fontSize: 15, theme: { background: '#1e1e1e', foreground: '#d4d4d4' } })
+  term.open(document.getElementById('t'))
+</script></body></html>

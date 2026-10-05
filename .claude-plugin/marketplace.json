@@ -1,0 +1,11 @@
+{
+  "name": "claude-code-cli-rtl",
+  "owner": { "name": "Ofek Betzalel", "url": "https://github.com/ofekbetzalel" },
+  "plugins": [
+    {
+      "name": "rtl",
+      "source": "./mod/rtl",
+      "description": "Right-to-left Hebrew, Arabic and Persian for the Claude Code terminal"
+    }
+  ]
+}

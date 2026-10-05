@@ -1,0 +1,5 @@
+Output exactly the lines between the markers, verbatim, with nothing before or after, no tools:
+<<<
+אימוג'י: לב ❤️ אגודל 👍🏽 משפחה 👨‍👩‍👧 דגל 🇮🇱 מקש 1️⃣ סמיילי 😀 וזכויות © בסוף.
+ניקוד: שָׁלוֹם עֲלֵיכֶם, מָה שְׁלוֹמְךָ הַיּוֹם? 
+>>>

@@ -1,0 +1,16 @@
+{
+  // The pure modules and their Node unit tests (*.spec.ts), typed for Node. The hooks module and
+  // the engine suites are typed by mod/rtl/tsconfig.json against the engine's own declarations.
+  "compilerOptions": {
+    "target": "es2023",
+    "lib": ["es2023"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "types": ["node"]
+  },
+  "include": ["mod/rtl/src", "mod/rtl/vendor", "mod/rtl/tests/*.spec.ts"]
+}
